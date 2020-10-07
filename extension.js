@@ -7,7 +7,7 @@ function init() {
 function enable() {
   imports.ui.workspace.Workspace.prototype._isOverviewWindow = (win) => {
     const show = isOverviewWindow(win);
-    return show && !win.get_meta_window().minimized;
+    return show && !win.minimized;
   };
   imports.ui.altTab.getWindows = (workspace) => {
     const windows = getWindows(workspace);
